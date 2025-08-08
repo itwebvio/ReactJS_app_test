@@ -7,6 +7,6 @@ RUN npm install
 RUN npm start 
 # Stage 2: Serve
 FROM nginx:alpine
-COPY --from=builder /app/build /usr/share/nginx/html
+COPY --from=builder /app
 EXPOSE 3000
 CMD ["nginx", "-g", "daemon off;"]
