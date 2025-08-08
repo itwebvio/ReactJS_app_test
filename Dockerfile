@@ -2,6 +2,7 @@
 FROM node:18-alpine as builder
 WORKDIR /app
 COPY . .
+WORKDIR /app
 RUN npm install 
 RUN npm start 
 # Stage 2: Serve
